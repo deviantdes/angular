@@ -9,14 +9,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var index_1 = require("./home/index");
 var AppComponent = (function () {
     function AppComponent() {
-        this.welcomeMessage = "My First ng2";
+        this.Ninja = { name: "desmond", belt: "black" };
     }
+    AppComponent.prototype.functionClick = function (val) {
+        alert(val);
+    };
+    AppComponent.prototype.passOutFunction = function (e) {
+        alert(e.message);
+        console.log(e.event);
+    };
     AppComponent = __decorate([
         core_1.Component({
+            moduleId: module.id,
             selector: "my-app",
-            template: "<h1>{{welcomeMessage}}</h1>"
+            templateUrl: "app.component.html",
+            directives: [index_1.HomeComponent]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

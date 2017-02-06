@@ -1,0 +1,13 @@
+﻿@model MvcAngular2.Models.School
+
+@{
+    ViewBag.Title = "School Index";
+}
+<my-app>Loading...</my-app>
+<hr/>
+@foreach(var x in Model.listofStudents)
+{
+    @("Name: "+x.Name) <br/>
+    @("Age: " + x.Age) <br />
+    @("Level: " + x.Level) <hr />
+}

@@ -1,0 +1,20 @@
+﻿<p>Hello, {{Ninja.name}}</p>
+
+<input [(ngModel)]="Ninja.name"/>
+<button (click)="functionClick('hello');">Alert me</button>
+<hr/>
+
+<app-home [ninjas]="Ninja" (passOut)="passOutFunction($event)">pass-in-content</app-home>
+
+<table border="1">
+    <tr>
+        <td>
+            Data from MVC
+        </td>
+    </tr>
+    <tr>
+        <td>
+            123
+        </td>
+    </tr>
+</table>

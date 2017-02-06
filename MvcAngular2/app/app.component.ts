@@ -1,12 +1,26 @@
-﻿import { Component } from "@angular/core";
+﻿import { Component , Input} from "@angular/core";
+import { HomeComponent } from "./home/index";
 
 @Component({
+    moduleId: module.id,
     selector: "my-app",
-    template : "<h1>{{welcomeMessage}}</h1>"
-
+    templateUrl: "app.component.html",
+    directives: [HomeComponent]
 })
 
 export class AppComponent
 {
-    welcomeMessage: String = "My First ng2";
-}   
+    Ninja = { name: "desmond", belt: "black" };
+
+    functionClick(val: any)
+    {
+        alert(val);
+    }
+
+    passOutFunction(e)
+    {
+        alert(e.message);
+        console.log(e.event);
+    }
+}
+   
