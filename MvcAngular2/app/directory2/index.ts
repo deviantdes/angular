@@ -1,0 +1,1 @@
+﻿export * from "./directory2.component";

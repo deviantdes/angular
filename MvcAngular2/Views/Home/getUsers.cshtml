@@ -1,0 +1,15 @@
+﻿@model MvcAngular2.Models.User
+
+@{
+    ViewBag.Title = "getUsers";
+}
+
+<h2>getUsers</h2>
+
+@foreach(var x in Model.listofUsers)
+{
+    @(x.uID) <br/>
+    @(x.uName)<br/>
+    @(x.uAge)<br/>
+    @(x.uGroup)<hr/>
+}
